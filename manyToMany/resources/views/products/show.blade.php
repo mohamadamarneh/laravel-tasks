@@ -1,0 +1,14 @@
+<h2>Product Name: </h2>
+<p>{{ $product->name }} || ${{ $product->price }}</p>
+
+<h3>Product Belongs to</h3>
+
+<ul>
+    @foreach($product->categories as $category)
+    <li>{{ $category->title }}</li>
+    @endforeach
+</ul>
+{{-- select *, category.title 
+from Products 
+Inner join on categories
+where products.id = categories.id; --}}
